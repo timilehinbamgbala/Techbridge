@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Build the TechBridge Homepage",
+    "description": "Create the first version of the TechBridge website using HTML and CSS.",
+    "difficulty": "Beginner",
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "title": "Build the TechBridge Programs Experience",
+    "description": "Create a Programs experience presenting TechBridge's available learning programs.",
+    "difficulty": "Beginner",
+    "status": "completed"
+  },
+  {
+    "id": 3,
+    "title": "Build the Internship Tasks Experience",
+    "description": "Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.",
+    "difficulty": "Beginner to Intermediate",
+    "status": "completed"
+  },
+  {
+    "id": 4,
+    "title": "Build an Interactive Internship Roadmap",
+    "description": "Use JavaScript to allow visitors to switch between the Data Analytics and Web Development internship tracks.",
+    "difficulty": "Beginner to Intermediate",
+    "status": "completed"
+  },
+  {
+    "id": 5,
+    "title": "Build the Challenge Hub",
+    "description": "Create a Challenge Hub where visitors can browse, search, filter and open practical challenges from both tracks.",
+    "difficulty": "Intermediate",
+    "status": "completed"
+  },
+  {
+    "id": 6,
+    "title": "Build the Intern Dashboard",
+    "description": "Create a dashboard where an intern can view their profile, progress, tasks and task status.",
+    "difficulty": "Intermediate",
+    "status": "completed"
+  },
+  {
+    "id": 7,
+    "title": "Build a TechBridge Task Management API",
+    "description": "Create a Node.js and Express REST API that serves the internship tasks and connect it to the Intern Dashboard using fetch().",
+    "difficulty": "Intermediate",
+    "status": "in-progress"
+  },
+  {
+    "id": 8,
+    "title": "Build the Complete TechBridge Internship Platform",
+    "description": "Combine the different components created during the internship into a complete TechBridge platform.",
+    "difficulty": "Intermediate",
+    "status": "not-started"
+  }
+]
