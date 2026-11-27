@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intern Dashboard | TechBridge</title>
+  <meta name="description" content="Track your TechBridge internship progress, work through your 8 tasks, and explore challenges and modern web technologies.">
+  <link rel="icon" type="image/png" href="images/techbridge-logo.png">
+  <link rel="apple-touch-icon" href="images/techbridge-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html" aria-label="TechBridge home">
+        <img src="images/techbridge-logo.png" alt="TechBridge" class="brand-mark" width="190" height="36">
+      </a>
+
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+      <label class="menu-button" for="menu-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="panel">
+        <nav class="links" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="internship-tasks.html">Internship</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <a class="btn btn-ghost" href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS" target="_blank" rel="noopener noreferrer">Join community</a>
+          <a class="btn btn-primary" href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener noreferrer">Apply now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="dash-welcome" aria-labelledby="welcomeTitle">
+      <div class="dash-welcome-inner">
+        <div class="dash-avatar" aria-hidden="true">T</div>
+
+        <div class="dash-welcome-copy">
+          <p class="dash-eyebrow">Web Development Intern</p>
+          <h1 id="welcomeTitle">Welcome back, <span>Timilehin</span></h1>
+          <p class="dash-lead">Pick up where you left off. Your tasks, progress and challenges are all in one place.</p>
+        </div>
+
+        <dl class="dash-meta">
+          <div>
+            <dt>Track</dt>
+            <dd>Web Development</dd>
+          </div>
+          <div>
+            <dt>Internship status</dt>
+            <dd><span class="dash-pill" id="internStatus">Loading...</span></dd>
+          </div>
+          <div>
+            <dt>Current task</dt>
+            <dd id="currentTask">Loading...</dd>
+          </div>
+          <div>
+            <dt>Backend Status</dt>
+            <dd>
+              <span class="api-status" id="apiStatus" data-state="checking" role="status" aria-live="polite">
+                <span class="api-dot" aria-hidden="true"></span>
+                <span id="apiStatusText">Checking...</span>
+              </span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="progress" class="dash-progress" aria-labelledby="progressTitle">
+      <div class="section-head">
+        <h2 id="progressTitle">Internship progress</h2>
+        <p>Your overall progress across all 8 internship tasks.</p>
+      </div>
+
+      <div class="dash-progress-card">
+        <div class="dash-progress-top">
+          <p class="dash-count"><strong id="doneCount">-</strong> <span>/ <span id="totalCount">-</span> Tasks Completed</span></p>
+          <p class="dash-percent"><span id="percentValue">0</span>%</p>
+        </div>
+
+        <div class="dash-bar" id="progressBar" role="progressbar" aria-label="Internship progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="dash-bar-fill" id="barFill" style="width: 0%"></div>
+        </div>
+
+        <dl class="dash-stats">
+          <div>
+            <dt>Total tasks</dt>
+            <dd id="statTotal">-</dd>
+          </div>
+          <div>
+            <dt>Completed</dt>
+            <dd id="statDone">-</dd>
+          </div>
+          <div>
+            <dt>Remaining</dt>
+            <dd id="statLeft">-</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="tasks" class="dash-tasks" aria-labelledby="tasksTitle">
+      <div class="section-head">
+        <h2 id="tasksTitle">Your tasks</h2>
+        <p>These tasks are loaded from the TechBridge Task Management API. Open a task to read it, or mark it as completed.</p>
+      </div>
+
+      <div class="dash-search">
+        <label for="taskSearch" class="sr-only">Search tasks and challenges</label>
+        <input id="taskSearch" type="search" placeholder="Search tasks and challenges, e.g. JavaScript" autocomplete="off">
+      </div>
+
+      <div class="dash-filters" role="group" aria-label="Filter tasks by status">
+        <button type="button" class="ch-chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="ch-chip" data-filter="completed" aria-pressed="false">Completed</button>
+        <button type="button" class="ch-chip" data-filter="in-progress" aria-pressed="false">In Progress</button>
+        <button type="button" class="ch-chip" data-filter="not-started" aria-pressed="false">Not Started</button>
+      </div>
+
+      <p class="dash-showing" id="taskCount" aria-live="polite"></p>
+
+      <div id="taskState" class="dash-state" role="status" hidden></div>
+      <div id="taskGrid" class="task-grid"></div>
+
+      <div id="searchChallenges" class="search-hits" hidden></div>
+    </section>
+  </main>
+
+  <dialog id="taskModal" class="ch-modal task-modal" data-track="Web Development" aria-label="Task details">
+    <div class="ch-modal-inner">
+      <button type="button" class="ch-modal-close" id="taskModalClose">Close</button>
+      <div id="taskModalBody"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer id="contact" class="site-footer">
+    <div class="contact-block">
+      <h2>Contact TechBridge</h2>
+      <p>Have a question about the programs or the internship? Send us an email.</p>
+      <a class="contact-mail" href="mailto:techbridgebaslink@gmail.com">techbridgebaslink@gmail.com</a>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/techbridge-logo.png" alt="TechBridge" width="190" height="36">
+        <p class="footer-tagline">Bridging Learning to Real-World Experience</p>
+        <ul class="social">
+          <li>
+            <a href="https://www.linkedin.com/company/techbridge-services/" target="_blank" rel="noopener noreferrer" aria-label="TechBridge on LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6.9 9.5H3.8V20h3.1V9.5zM5.3 4.4a1.8 1.8 0 100 3.6 1.8 1.8 0 000-3.6zM20.2 13.6c0-2.8-1.5-4.3-3.6-4.3-1.7 0-2.5.9-2.9 1.6V9.5h-3.1V20h3.1v-5.6c0-1.5.3-2.9 2.1-2.9s1.8 1.7 1.8 3V20h3.1v-6.4z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/p/Baselink-Services-100066771475783/" target="_blank" rel="noopener noreferrer" aria-label="Baselink Services on Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6V13h2.7v8h3.2z" /></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="internship-tasks.html">Internship</a></li>
+          <li><a href="challenges.html">Challenges</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html#community">Community</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Get involved</h3>
+        <ul>
+          <li><a href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener noreferrer">Apply for the internship</a></li>
+          <li><a href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS" target="_blank" rel="noopener noreferrer">Join the WhatsApp community</a></li>
+          <li><a href="mailto:techbridgebaslink@gmail.com">Email TechBridge</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; 2026 TechBridge by Baselink Services Limited. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/script.js?v=5"></script>
+  <script src="js/dashboard.js?v=1"></script>
+</body>
+</html>

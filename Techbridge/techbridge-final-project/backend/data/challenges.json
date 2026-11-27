@@ -1,0 +1,200 @@
+[
+  {
+    "id": "sales-analysis",
+    "title": "Monthly Sales Analysis",
+    "track": "Data Analytics",
+    "level": "Beginner",
+    "time": "3 to 4 hours",
+    "summary": "Clean a small sales spreadsheet and find which products, months and regions bring in the most revenue.",
+    "outcome": "A one page summary with pivot tables and two charts showing monthly sales performance.",
+    "objective": "Turn raw sales records into clear findings that a manager could act on.",
+    "skills": [
+      "Data cleaning",
+      "Pivot tables",
+      "Basic charts"
+    ],
+    "tools": [
+      "Excel",
+      "Google Sheets"
+    ],
+    "produce": [
+      "A cleaned copy of the dataset with duplicates and blanks handled",
+      "Pivot tables for product, month and region",
+      "A short note listing three findings and what they suggest"
+    ]
+  },
+  {
+    "id": "expense-breakdown",
+    "title": "Expense Breakdown Report",
+    "track": "Data Analytics",
+    "level": "Beginner",
+    "time": "2 to 3 hours",
+    "summary": "Group a month of company expenses into categories and show where the money is going.",
+    "outcome": "A clear report that ranks spending categories and flags the three biggest costs.",
+    "objective": "Practise sorting, grouping and summarising financial data without losing accuracy.",
+    "skills": [
+      "Categorising data",
+      "SUMIF and formulas",
+      "Bar and pie charts"
+    ],
+    "tools": [
+      "Excel",
+      "Google Sheets"
+    ],
+    "produce": [
+      "A categorised expense sheet with totals per category",
+      "One chart comparing categories",
+      "Two sentences recommending where to cut costs"
+    ]
+  },
+  {
+    "id": "churn-analysis",
+    "title": "Customer Churn Analysis",
+    "track": "Data Analytics",
+    "level": "Intermediate",
+    "time": "4 to 5 hours",
+    "summary": "Study a subscription dataset to work out which customers leave, and what they have in common.",
+    "outcome": "A churn rate summary and a short list of patterns that point to why customers leave.",
+    "objective": "Find the traits linked to customers leaving so the business can act before it happens.",
+    "skills": [
+      "SQL grouping and aggregation",
+      "Comparing segments",
+      "Presenting findings"
+    ],
+    "tools": [
+      "Excel",
+      "SQL",
+      "Google Sheets"
+    ],
+    "produce": [
+      "Overall churn rate and churn by customer segment",
+      "Two or three charts that support your findings",
+      "A short written summary with recommendations"
+    ]
+  },
+  {
+    "id": "performance-dashboard",
+    "title": "Business Performance Dashboard",
+    "track": "Data Analytics",
+    "level": "Advanced",
+    "time": "6 to 8 hours",
+    "summary": "Combine sales, cost and customer data from two related tables into one dashboard for a small business.",
+    "outcome": "A working dashboard that lets a manager check monthly performance at a glance.",
+    "objective": "Design a dashboard around the questions a decision maker actually asks.",
+    "skills": [
+      "Joining related tables",
+      "KPI design",
+      "Data visualization"
+    ],
+    "tools": [
+      "Excel",
+      "SQL",
+      "Google Sheets"
+    ],
+    "produce": [
+      "A dashboard with at least four visuals",
+      "A list of the KPIs you chose and why",
+      "A short guide explaining how to read the dashboard"
+    ]
+  },
+  {
+    "id": "landing-page",
+    "title": "Responsive Landing Page",
+    "track": "Web Development",
+    "level": "Beginner",
+    "time": "3 to 4 hours",
+    "summary": "Build a landing page for a made up product that reads well on a phone, tablet and laptop.",
+    "outcome": "A finished one page site with a hero, features and a call to action that adapts to any screen.",
+    "objective": "Practise semantic HTML and responsive CSS by building a page from a simple brief.",
+    "skills": [
+      "Semantic HTML",
+      "Flexbox and Grid",
+      "Media queries"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "Git/GitHub"
+    ],
+    "produce": [
+      "A single page with hero, features and contact sections",
+      "A layout that holds up from 360px wide to desktop",
+      "A live link to the deployed page"
+    ]
+  },
+  {
+    "id": "contact-form",
+    "title": "Contact Form with Validation",
+    "track": "Web Development",
+    "level": "Intermediate",
+    "time": "3 to 4 hours",
+    "summary": "Create a contact form that checks what people type and tells them clearly what to fix.",
+    "outcome": "A form that validates each field, shows helpful messages, and confirms when it is sent.",
+    "objective": "Learn how JavaScript reads user input and responds without reloading the page.",
+    "skills": [
+      "DOM events",
+      "Form validation",
+      "Accessible error messages"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "produce": [
+      "Name, email and message fields with live validation",
+      "Error and success states that are easy to notice",
+      "A form that works with keyboard only"
+    ]
+  },
+  {
+    "id": "product-page",
+    "title": "Product Page with Image Gallery",
+    "track": "Web Development",
+    "level": "Intermediate",
+    "time": "4 to 5 hours",
+    "summary": "Design a product page where shoppers can switch between photos and pick options like size or colour.",
+    "outcome": "A product page with a working gallery and option selectors that update what the visitor sees.",
+    "objective": "Combine layout work with interactive behaviour to build a page people could shop from.",
+    "skills": [
+      "Layout design",
+      "Event handling",
+      "Updating the DOM"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "produce": [
+      "A gallery with thumbnails that change the main image",
+      "Size and colour selectors that update the page",
+      "A layout that works on mobile and desktop"
+    ]
+  },
+  {
+    "id": "cart-interface",
+    "title": "Shopping Cart Interface",
+    "track": "Web Development",
+    "level": "Advanced",
+    "time": "6 to 8 hours",
+    "summary": "Build a cart where visitors add items, change quantities, and keep their cart after a refresh.",
+    "outcome": "A working cart that updates totals instantly and remembers items between visits.",
+    "objective": "Manage changing data in JavaScript and keep what is on screen in sync with it.",
+    "skills": [
+      "State management",
+      "Array methods",
+      "localStorage"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "produce": [
+      "Add, remove and quantity controls for each item",
+      "A running subtotal and item count",
+      "A cart that survives a page refresh"
+    ]
+  }
+]

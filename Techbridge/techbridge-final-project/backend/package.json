@@ -1,0 +1,19 @@
+{
+  "name": "techbridge-intern-management-platform",
+  "version": "1.0.0",
+  "description": "TechBridge Intern Management Platform: Express API and dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "techbridge",
+    "express",
+    "rest-api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
